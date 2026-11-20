@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Displays a simple calculator menu
+ * main - Displays a calculator menu and validates choices
  *
- * Return: Always 0
+ * Return: 0 on success, 1 on input failure
  */
 int main(void)
 {
-	int choice = -1;
+	int choice;
 
 	printf("Simple Calculator\n");
 
@@ -24,8 +24,8 @@ int main(void)
 
 		if (choice == 0)
 			printf("Bye!\n");
-		else
-			printf("Please choose 0 to quit.\n");
+		else if (choice < 0 || choice > 4)
+			printf("Invalid choice\n");
 
 	} while (choice != 0);
 
