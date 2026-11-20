@@ -33,7 +33,7 @@ int main(void)
 		{
 			printf("Invalid choice\n");
 		}
-		else if (choice == 1)
+		else if (choice == 1 || choice == 2)
 		{
 			printf("A: ");
 			fflush(stdout);
@@ -45,7 +45,10 @@ int main(void)
 			if (scanf("%d", &b) != 1)
 				return (1);
 
-			printf("Result: %d\n", a + b);
+			if (choice == 1)
+				printf("Result: %d\n", a + b);
+			else
+				printf("Result: %d\n", a - b);
 		}
 
 	} while (choice != 0);
